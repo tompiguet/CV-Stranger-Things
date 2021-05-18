@@ -1,0 +1,305 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*----------------------------------------- TEXTE FACON STRANGER THINGS----------------------------*/
+.st {
+  width: 625px;
+  margin: auto;
+  padding-top: 6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-family: "ITC Benguiat W01";
+  font-weight: 800;
+  color: #000000;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-animation: blur 2s ease-out infinite;
+          animation: blur 2s ease-out infinite;
+  text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+  letter-spacing: -2px;
+}
+
+@-webkit-keyframes blur {
+  from {
+    text-shadow: -0.05rem -0.05rem 5px #ed2b12, 0.05rem -0.05rem 5px #ed2b12, -0.05rem 0.05rem 5px #ed2b12, 0.05rem 0.05rem 20px #ed2b12, 0 0 45px #630100, 0 0 80px #450100;
+  }
+}
+
+@keyframes blur {
+  from {
+    text-shadow: -0.05rem -0.05rem 5px #ed2b12, 0.05rem -0.05rem 5px #ed2b12, -0.05rem 0.05rem 5px #ed2b12, 0.05rem 0.05rem 20px #ed2b12, 0 0 45px #630100, 0 0 80px #450100;
+  }
+}
+
+.st:hover {
+  color: #ff0000;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.st-bottom {
+  top: -2.75rem;
+  position: relative;
+  left: 0.6rem;
+}
+
+.st-drop {
+  line-height: 0;
+  position: relative;
+  top: 1.55rem;
+}
+
+.firstLetterTop {
+  font-size: 8rem;
+  letter-spacing: 5px;
+}
+
+.lastLetterTop {
+  font-size: 8rem;
+}
+
+.firstLetterBot {
+  font-size: 110%;
+}
+
+.lastLetterBot {
+  font-size: 110%;
+}
+
+.fond {
+  position: absolute;
+  top: 0;
+  height: 0%;
+  width: 100%;
+  z-index: 0;
+  background-image: url("../img/wallpaper3.jpg");
+  background-position: center;
+}
+
+.fond p {
+  letter-spacing: 1px;
+}
+
+.fond2 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Les DIV animées de l'accueil */
+.up {
+  z-index: 1;
+  height: 50vh;
+  position: relative;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(1%, #2e49bb), color-stop(21%, #182a63), color-stop(70%, black), to(black));
+  background: linear-gradient(0deg, black 0%, #2e49bb 1%, #182a63 21%, black 70%, black 100%);
+}
+
+.up #img_up {
+  position: absolute;
+  bottom: 0;
+}
+
+.down {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50vh;
+  background: #ff6666;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(1%, #ff6666), color-stop(14%, #ff2b12), color-stop(75%, black), to(black));
+  background: linear-gradient(180deg, black 0%, #ff6666 1%, #ff2b12 14%, black 75%, black 100%);
+}
+
+.down #img_down {
+  position: absolute;
+  top: 0;
+}
+
+#img_up {
+  width: 150px;
+  -webkit-animation: 10s linear 0s infinite move_left;
+  animation: 10s linear 0s infinite move_left;
+}
+
+@-webkit-keyframes move_left {
+  from {
+    margin-left: 85%;
+  }
+  to {
+    margin-left: -30%;
+  }
+}
+
+@keyframes move_left {
+  from {
+    margin-left: 85%;
+  }
+  to {
+    margin-left: -30%;
+  }
+}
+
+#img_down {
+  width: 150px;
+  -webkit-animation: 10s linear 0s infinite move_right;
+  animation: 10s linear 0s infinite move_right;
+}
+
+@-webkit-keyframes move_right {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes move {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+#img_forest11 {
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  opacity: 95%;
+}
+
+#img_forest12 {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 95%;
+}
+
+#img_forest21 {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  opacity: 95%;
+}
+
+#img_forest22 {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 95%;
+}
+
+.reduced_up {
+  z-index: 1;
+  height: 0vh;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.reduced_down {
+  z-index: 1;
+  height: 0vh;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+}
+
+.CvPart1 {
+  display: none;
+  background-color: black;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+/*------------------------------MOVING DIV------------------------------*/
+.slider-thumb::before {
+  position: absolute;
+  content: "";
+  left: 20vw;
+  top: 5%;
+  width: 60vw;
+  height: 450px;
+  background: #17141d9f;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+
+@-webkit-keyframes sliderShape {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    -webkit-transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    -webkit-transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+            transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+@keyframes sliderShape {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    -webkit-transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+            transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    -webkit-transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+            transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+/*--------------------------------LES PARALLAX ------------------------------*/
+.parallax {
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
