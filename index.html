@@ -10,46 +10,175 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/06392c1ddc.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="icon" type="image/png" href="assets/img/quiddich.png" />
+    <link rel="icon" type="image/png" href="" />
     <title>CV ST</title>
 
 </head>
 
 <body>
-    <div class="up">
+    <!--Div du haut-->
+    <div class="up" id="upparticles-js">
         <img src="assets/img/up.png" id="img_up" alt="up">
         <img src="assets/img/forest11.png" id="img_forest11" alt="up">
         <img src="assets/img/forest12.png" id="img_forest12" alt="up">
-
-
     </div>
-    <div class="fond">
+    <!--Page de bienvenue-->
+    <div class="fond" id="particles-js">
         <div class="st">
+            <div class="st-bound st-bound-top"></div>
             <div class="st-top">
-                <div class="st-bound"></div>
-                <p><span class="st-drop firstLetterTop">B</span>ienvenu<span class="st-drop lastLetterTop">e</span></p>
+                <p><span class="st-drop firstLetterTop">B</span>ienvenu<span class="st-drop lastLetterTop">e</span>
+                </p>
             </div>
             <div class="st-bottom">
-                <p><span class="firstLetterBot">V</span>isiteu<span class="lastLetterBot">r</span>
-                    <div class="st-bound"></div>
+                <p><span class="firstLetterBot">V</span>isiteu<span class="lastLetterBot">r</span></p>
+            </div>
+            <div class="st-bound st-bound-bot"></div>
+        </div>
+    </div>
+    <!--Div du bas-->
+    <div class="down" id="downparticles-js">
+        <img src="assets/img/Down.png" id="img_down" alt="down">
+        <img src="assets/img/forest21.png" id="img_forest21" alt="up">
+        <img src="assets/img/forest22.png" id="img_forest22" alt="up">
+    </div>
+
+
+    <!-------Présentation------->
+    <div class="container-fluid presentation" id="particles-js">
+        <div class="row pt-2">
+            <div class="col-8">
+                <h2>QUI SUIS-JE...</h2>
+                <div class="st-bound st-bound-subtitle" id="subOne"></div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-5">
+                <div class="profilPicture">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="p1">TOM PIGUET</p>
+                <p>Fort de plusieurs années d'expérience en entreprise (industrie et
+                    logistique)
+                    en tant que <strong>chargé de prévention sécurité</strong>,
+                    j'ai décidé de donner un nouveau tournant à ma carrière et de me lancer dans le métier de
+                    développeur
+                    web. <br /><br />
+                    J'ai maintenant la chance de pouvoir travailler dans un domaine qui me passionne et me
+                    permet
+                    d'exploiter
+                    pleinement ma logique et ma créativité. <br />
+                    <br />
+                    Domicilié sur <strong>Compiègne</strong>, je suis actuellement en recherche d'un poste de
+                    <strong>Développeur Front <i class="fas fa-code"></i> et / ou Back-End
+                        <i class="fas fa-database"></i></strong>
+                    dans la région, ou en <strong>télétravail sur la France entière.</strong>
                 </p>
             </div>
         </div>
     </div>
-    <div class="down">
-        <img src="assets/img/Down.png" id="img_down" alt="down">
-        <img src="assets/img/forest21.png" id="img_forest21" alt="up">
-        <img src="assets/img/forest22.png" id="img_forest22" alt="up">
 
-    </div>
+    <!-------PARCOURS------->
+    <div class="container-fluid parcours parallax" id="">
+        <div class="row sticky-top parcoursBlack pt-2">
+            <div class="col-8">
+                <h2>MON PARCOURS...</h2>
+                <div class="st-bound st-bound-subtitle" id="subTwo"></div>
+            </div>
+        </div>
+        <!--La Manu-->
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-1 step">
+                <p class="redtitle">Formation intensive Développeur Web</p>
+                <ul>
+                    <li>Acquisition du titre professionnel "Développeur Web et Web Mobile (Bac+2, RNCP
+                        5927 Niveau III)</li>
+                    <li>Maquettage : Adobe illustrator, Adobe XD.</li>
+                    <li>Création d'interfaces utilisateur : HTML, CSS, JS.</li>
+                    <li>Gestion de contenu en back end.</li>
+                    <li>Outils : Angular, WordPress, JQuery</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Weldom-->
+
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-5 step">
+                <p class="bluetitle">Chargé de prévention sécurité (HSE)</p>
+                <ul>
+                    <li>Prévention sécurité sur un site logistique classé SEVESO Seuil Haut.</li>
+                    <li>Gestion et prévention des accidents de travail.</li>
+                    <li>Participation aux audits internes.</li>
+                    <li>Gestion des formations et des habilitations du personnel.</li>
+                    <li>Animation et sensibilisation du personnel à tous les niveaux : managers et employés.</li>
+                    <li>Création de site web à destination des nouveaux arrivants.</li>
+                    <li>Création gestion et diffusion des consignes de sécurité.</li>
+                    <li>Préparation d'exercices incendie et formation du personnel.</li>
+                    <li>Création et organisation de la première journée sécurité du site (500 personnes).</li>
+                    <li>Gestion de la crise COVID-19.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--SUEZ-->
+
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-1 step">
+                <p class="redtitle">Ingénieur QSE - Alternance</p>
+                <ul>
+                    <li>Mise en place des normes ISO 14001 (renouvellement) et 50001 (première certification).</li>
+                    <li>Gestion et prévention des accidents de travail et application de la politique QSE.</li>
+                    <li>Evaluation des risques chimiques.</li>
+                    <li>Révision complète du plan d'opérations interne.</li>
+                    <li>Animation et sensibilisation du personnel.</li>
+                    <li>Création gestion et diffusion des consignes de sécurité.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Master-->
+
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-5 step">
+                <p class="bluetitle">Master Environnement & Industrie (Mention Bien)</p>
+                <ul>
+                    <li>Master en alternance chez Suez.</li>
+                    <li>Programmation : Python, VBA.</li>
+                    <li>QSE</li>
+                    <li>Energies, traitement des eaux et des déchets.</li>
+                    <li>Gestion de projet et éco-conception.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Licence-->
+
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-1 step">
+                <p class="redtitle">Licence Géophysique (Mention Bien)</p>
+                <ul>
+                    <li>Géologie.</li>
+                    <li>Physique.</li>
+                    <li>Langages de programmation : c++, python.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--BAC-->
+
+        <div class="row mt-5 reveal">
+            <div class="col-md-6 offset-md-5 step">
+                <p class="bluetitle">BAC Scientifique (Mention A.Bien)</p>
+                <ul>
+                    <li>Lycée Masséna - Nice</li>
+
+                </ul>
+            </div>
+        </div>
 
 
-
-    <div class="container-fuid CvPart1">
-
-        <h2>Okokok</h2>
-        <p>8epzjiepotrzkpbb,etjpthkgzp</p>
 
     </div>
 
@@ -60,6 +189,19 @@
 
 
 
+
+<!--Les scripts Particles.js-->
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/particles.min.js"></script>
+
+<!--Les autres scripts-->
+<script src="https://unpkg.com/scrollreveal"></script>
 <script src="assets/js/Javascript.js"></script>
+
+
+<!--Les ScrollReveal-->
+<script> 
+</script>
 
 </html>
