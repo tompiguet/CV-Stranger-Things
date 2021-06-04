@@ -4,6 +4,12 @@ body {
   padding: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .up, .down {
+    display: none;
+  }
+}
+
 /*----------------------------------------- TEXTE FACON STRANGER THINGS----------------------------*/
 /* Plein écran */
 .st {
@@ -13,8 +19,8 @@ body {
   text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
   letter-spacing: -2px;
   position: fixed;
-  left: 20vw;
-  right: 20vw;
+  left: 5vw;
+  right: 5vw;
   margin-top: 25vh;
   text-align: center;
   text-transform: uppercase;
@@ -84,7 +90,7 @@ body {
   margin: auto;
   margin-top: -10px;
   margin-bottom: -1.2rem;
-  max-width: 80%;
+  max-width: 60%;
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }
@@ -93,7 +99,7 @@ body {
   margin: auto;
   margin-top: -90px;
   margin-bottom: -1.2rem;
-  max-width: 60%;
+  max-width: 40%;
   -webkit-transform-origin: center center;
           transform-origin: center center;
 }

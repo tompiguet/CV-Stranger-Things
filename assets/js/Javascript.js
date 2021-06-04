@@ -3,8 +3,6 @@
 
 // En fonction de la taille de l'écran : affcher / cacher le rideau d'accueil
 if (window.matchMedia("(max-width: 1000px)").matches) {
-    document.querySelector(".up").style.display = "none";
-    document.querySelector(".down").style.display = "none";
     document.querySelector(".presentation").style.display = "block";
     document.querySelector(".parcours").style.display = "block";
     document.querySelector(".competences").style.display = "block";
