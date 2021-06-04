@@ -34,6 +34,7 @@ body {
 }
 
 /*----------------------------------------- TEXTE FACON STRANGER THINGS----------------------------*/
+/* Plein écran */
 .st {
     @include strangerBigText();
     position: fixed;
@@ -47,8 +48,7 @@ body {
     animation: blur 2s ease-out infinite; // durée de l'animation blur du titre
 }
 
-
-// ANIMATION BLUR 
+// ANIMATION BLUR
 @keyframes blur {
     from {
         text-shadow: -0.05rem -0.05rem 5px #ed2b12, 0.05rem -0.05rem 5px #ed2b12, -0.05rem 0.05rem 5px #ed2b12,
@@ -77,12 +77,12 @@ body {
 
 // Première et dernière lettres de la ligne du haut
 .firstLetterTop {
-    font-size: 120px;
+    font-size: 150%;
     letter-spacing: 5px;
 }
 
 .lastLetterTop {
-    font-size: 120px;
+    font-size: 150%;
 }
 
 // Première et dernière lettres de la ligne du bas
@@ -94,7 +94,7 @@ body {
     font-size: 110%;
 }
 
-/*-------------------------------------------- TRAIT ROUGE  ----------------------------------*/
+/*- TRAIT ROUGE  -*/
 .st-bound {
     box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12,
         0.05rem 0.05rem 2px #ed2b12;
@@ -122,14 +122,89 @@ body {
     margin-top: -10px;
 }
 
-#subOne {
+#subOne,
+#subTwo,
+#subThree,
+#subFour {
     width: 0%;
 }
 
-#subTwo {
-    width: 0%;
-}
+/* TITRE POUR ECRAN MOYEN */
 
+@media screen and (max-width: 630px) {
+    .st {
+        @include strangerBigText();
+        position: fixed;
+        left: 5vw;
+        right: 5vw;
+        margin-top: 25vh;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 50px;
+        transition: 1s; //pour le hover et la disparition du texte
+        animation: blur 2s ease-out infinite; // durée de l'animation blur du titre
+    }
+
+    // Position de la 2eme ligne de texte
+    .st-bottom {
+        top: -26px;
+        position: relative;
+    }
+
+    // Décalage de la première de et la dernière lettre du haut
+    .st-drop {
+        line-height: 0;
+        position: relative;
+        top: 20px;
+    }
+
+    // Première et dernière lettres de la ligne du haut
+    .firstLetterTop {
+        font-size: 166%;
+        letter-spacing: -1px;
+    }
+
+    .lastLetterTop {
+        font-size: 166%;
+    }
+
+    // Première et dernière lettres de la ligne du bas
+    .firstLetterBot {
+        font-size: 110%;
+    }
+
+    .lastLetterBot {
+        font-size: 110%;
+    }
+
+    /*- TRAIT ROUGE  -*/
+    .st-bound {
+        box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12,
+            0.05rem 0.05rem 2px #ed2b12;
+        height: 3px;
+        transition: 1s;
+    }
+
+    .st-bound-top {
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: -0.5rem;
+        max-width: 100%;
+        transform-origin: center center;
+    }
+
+    .st-bound-bot {
+        margin: auto;
+        margin-top: -53px;
+        margin-bottom: -1.2rem;
+        max-width: 90%;
+        transform-origin: center center;
+    }
+
+    .st-bound-subtitle {
+        margin-top: -10px;
+    }
+}
 
 .fond {
     position: fixed;
@@ -138,8 +213,6 @@ body {
     background-image: url("../img/wallpaper3.jpg");
     background-position: center;
 }
-
-
 
 /*--------------------------------LES PARALLAX ------------------------------*/
 
@@ -295,6 +368,8 @@ body {
     transition-duration: 1.5s;
 }
 
+/*---------------------------------------PRESENTATION----------------------------------*/
+
 .presentation {
     .p1 {
         @include strangerTitleRed();
@@ -310,7 +385,12 @@ body {
     background-color: black;
     z-index: 2;
     width: 100%;
-    height: 100vh;
+    height: auto;
+
+    .presentationBlack {
+        transition: 1s;
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
 /*------------------------------MOVING DIV------------------------------*/
@@ -323,7 +403,7 @@ body {
     position: relative;
     content: "";
     left: 5vw;
-    width: 350px;
+    width: 80%;
     height: 350px;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
@@ -354,38 +434,182 @@ body {
     background-image: url("../img/phototom.jpg");
 }
 
-
-
 /*-----------------------------------------PARCOURS----------------------------------------*/
 
 .parcours {
-    h2 {
-        @include strangerBigText();
-    }
-    .redtitle {
-        @include strangerTitleRed()
-    }
-    .bluetitle {
-        @include strangerTitleBlue()
-    }
-    ul {
-        @include strangerText()
-    }
-    .step {
-        background-color: rgba(0, 0, 0, 0.274);
-    }
-    .parcoursBlack {
-        transition: 2.5s;
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-
     display: none;
-    background-image: url('../img/wallpaper2.jpg');
+    background-image: url("../img/wallpaper2.jpg");
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     height: auto;
+
+    h2 {
+        @include strangerBigText();
+    }
+    .redtitle {
+        @include strangerTitleRed();
+    }
+    .bluetitle {
+        @include strangerTitleBlue();
+    }
+    ul {
+        @include strangerText();
+    }
+    .step {
+        background-color: rgba(0, 0, 0, 0.418);
+        transition: 1s;
+    }
+    .parcoursBorder {
+        background-color: rgba(0, 0, 0, 0.418);
+        box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12,
+            0.05rem 0.05rem 2px #ed2b12;
+        transition: 1s;
+    }
+
+    .parcoursBlack {
+        transition: 1s;
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
+/*-----------------------------------------COMPETENCES----------------------------------------*/
 
+.competences {
+    display: none;
+    background-color: black;
+    height: auto;
+
+    h2 {
+        @include strangerBigText();
+    }
+
+    h4 {
+        @include strangerTitleRed();
+    }
+
+    p {
+        @include strangerText();
+    }
+    .listecompetences {
+        text-align: center;
+        list-style-type: none;
+        line-height: 3em;
+        white-space: nowrap; /*empeche d'aller a la ligne entre deux mots d'un seul lien*/
+    }
+
+    .listecompetences li {
+        font-size: 1rem;
+        font-weight: bold;
+        white-space: nowrap; /*empeche d'aller a la ligne */
+        @include strangerText();
+    }
+
+    .listecompetences img {
+        width: 45px;
+        height: auto;
+    }
+
+    #hobbies {
+        margin-left: 5vw;
+    }
+
+    #titre_hobbies {
+        margin-left: 5vw;
+        @include strangerTitleBlue();
+    }
+
+    #competence_colonne1,
+    #competence_colonne3,
+    #competence_colonne5 {
+        background-color: rgba(63, 9, 9, 0.726);
+    }
+
+    .competencesBlack {
+        transition: 1s;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+/* --------------------Animation Camion Pompier--------------------------- */
+
+#camion {
+    width: 150px;
+}
+
+#chemincamion {
+    background-color: rgba(255, 255, 255, 0);
+    height: 90px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#camionpompier {
+    width: 150px;
+
+    -webkit-animation: 10s linear 0s infinite move_eye;
+    animation: 10s linear 0s infinite move_eye;
+}
+
+@-webkit-keyframes move_eye {
+    from {
+        margin-left: -30%;
+    }
+    to {
+        margin-left: 100%;
+    }
+}
+@keyframes move_eye {
+    from {
+        margin-left: -30%;
+    }
+    to {
+        margin-left: 100%;
+    }
+}
+
+/*-----------------------------------------CONTACT----------------------------------------*/
+
+.contact {
+    display: none;
+    background-image: url("../img/talkie.jpg");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95vh;
+
+    h2 {
+        @include strangerBigText();
+    }
+    .blue {
+        @include strangerTitleBlue();
+    }
+    .red {
+        @include strangerTitleRed();
+    }
+    p {
+        @include strangerText();
+    }
+    a,
+    i {
+        color: white;
+        font-size: 35px;
+    }
+
+    a:hover {
+        color: rgba(255, 255, 255, 0.822);
+    }
+}
+
+/*---------------------------------------------------------FOOTER---------------------------------------------------------------------*/
+
+footer {
+    display: none;
+    height: 5vh;
+    background-color: black;
+
+    color: white;
+    p {
+        margin-bottom: 0;
+    }
+}

@@ -5,6 +5,7 @@ body {
 }
 
 /*----------------------------------------- TEXTE FACON STRANGER THINGS----------------------------*/
+/* Plein écran */
 .st {
   font-family: "ITC Benguiat W01";
   font-weight: 800;
@@ -54,12 +55,12 @@ body {
 }
 
 .firstLetterTop {
-  font-size: 120px;
+  font-size: 150%;
   letter-spacing: 5px;
 }
 
 .lastLetterTop {
-  font-size: 120px;
+  font-size: 150%;
 }
 
 .firstLetterBot {
@@ -70,7 +71,7 @@ body {
   font-size: 110%;
 }
 
-/*-------------------------------------------- TRAIT ROUGE  ----------------------------------*/
+/*- TRAIT ROUGE  -*/
 .st-bound {
   -webkit-box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
           box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
@@ -101,12 +102,82 @@ body {
   margin-top: -10px;
 }
 
-#subOne {
+#subOne,
+#subTwo,
+#subThree,
+#subFour {
   width: 0%;
 }
 
-#subTwo {
-  width: 0%;
+/* TITRE POUR ECRAN MOYEN */
+@media screen and (max-width: 630px) {
+  .st {
+    font-family: "ITC Benguiat W01";
+    font-weight: 800;
+    color: #000000;
+    text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+    letter-spacing: -2px;
+    position: fixed;
+    left: 5vw;
+    right: 5vw;
+    margin-top: 25vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-animation: blur 2s ease-out infinite;
+            animation: blur 2s ease-out infinite;
+  }
+  .st-bottom {
+    top: -26px;
+    position: relative;
+  }
+  .st-drop {
+    line-height: 0;
+    position: relative;
+    top: 20px;
+  }
+  .firstLetterTop {
+    font-size: 166%;
+    letter-spacing: -1px;
+  }
+  .lastLetterTop {
+    font-size: 166%;
+  }
+  .firstLetterBot {
+    font-size: 110%;
+  }
+  .lastLetterBot {
+    font-size: 110%;
+  }
+  /*- TRAIT ROUGE  -*/
+  .st-bound {
+    -webkit-box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
+            box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
+    height: 3px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .st-bound-top {
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: -0.5rem;
+    max-width: 100%;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  .st-bound-bot {
+    margin: auto;
+    margin-top: -53px;
+    margin-bottom: -1.2rem;
+    max-width: 90%;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  .st-bound-subtitle {
+    margin-top: -10px;
+  }
 }
 
 .fond {
@@ -260,12 +331,13 @@ body {
           transition-duration: 1.5s;
 }
 
+/*---------------------------------------PRESENTATION----------------------------------*/
 .presentation {
   display: none;
   background-color: black;
   z-index: 2;
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 .presentation .p1 {
@@ -289,6 +361,12 @@ body {
   color: white;
 }
 
+.presentation .presentationBlack {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /*------------------------------MOVING DIV------------------------------*/
 .profilPicture::before {
   background-image: url("../img/demogorgon.jpg");
@@ -298,7 +376,7 @@ body {
   position: relative;
   content: "";
   left: 5vw;
-  width: 350px;
+  width: 80%;
   height: 350px;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
@@ -397,12 +475,194 @@ body {
 }
 
 .parcours .step {
-  background-color: rgba(0, 0, 0, 0.274);
+  background-color: rgba(0, 0, 0, 0.418);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.parcours .parcoursBorder {
+  background-color: rgba(0, 0, 0, 0.418);
+  -webkit-box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
+          box-shadow: -0.05rem -0.05rem 2px #ed2b12, 0.05rem -0.05rem 2px #ed2b12, -0.05rem 0.05rem 2px #ed2b12, 0.05rem 0.05rem 2px #ed2b12;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .parcours .parcoursBlack {
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   background-color: rgba(0, 0, 0, 0);
+}
+
+/*-----------------------------------------COMPETENCES----------------------------------------*/
+.competences {
+  display: none;
+  background-color: black;
+  height: auto;
+}
+
+.competences h2 {
+  font-family: "ITC Benguiat W01";
+  font-weight: 800;
+  color: #000000;
+  text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+  letter-spacing: -2px;
+}
+
+.competences h4 {
+  font-family: "ITC Benguiat W01";
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 2px 1px #c40000;
+  font-size: 2rem;
+}
+
+.competences p {
+  font-family: "ITC Benguiat W01";
+  color: white;
+}
+
+.competences .listecompetences {
+  text-align: center;
+  list-style-type: none;
+  line-height: 3em;
+  white-space: nowrap;
+  /*empeche d'aller a la ligne entre deux mots d'un seul lien*/
+}
+
+.competences .listecompetences li {
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  /*empeche d'aller a la ligne */
+  font-family: "ITC Benguiat W01";
+  color: white;
+}
+
+.competences .listecompetences img {
+  width: 45px;
+  height: auto;
+}
+
+.competences #hobbies {
+  margin-left: 5vw;
+}
+
+.competences #titre_hobbies {
+  margin-left: 5vw;
+  font-family: "ITC Benguiat W01";
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 2px 1px #2400c4;
+  font-size: 2rem;
+}
+
+.competences #competence_colonne1,
+.competences #competence_colonne3,
+.competences #competence_colonne5 {
+  background-color: rgba(63, 9, 9, 0.726);
+}
+
+.competences .competencesBlack {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* --------------------Animation Camion Pompier--------------------------- */
+#camion {
+  width: 150px;
+}
+
+#chemincamion {
+  background-color: rgba(255, 255, 255, 0);
+  height: 90px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#camionpompier {
+  width: 150px;
+  -webkit-animation: 10s linear 0s infinite move_eye;
+  animation: 10s linear 0s infinite move_eye;
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -30%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes move_eye {
+  from {
+    margin-left: -30%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+/*-----------------------------------------CONTACT----------------------------------------*/
+.contact {
+  display: none;
+  background-image: url("../img/talkie.jpg");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+}
+
+.contact h2 {
+  font-family: "ITC Benguiat W01";
+  font-weight: 800;
+  color: #000000;
+  text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+  letter-spacing: -2px;
+}
+
+.contact .blue {
+  font-family: "ITC Benguiat W01";
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 2px 1px #2400c4;
+  font-size: 2rem;
+}
+
+.contact .red {
+  font-family: "ITC Benguiat W01";
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 2px 1px #c40000;
+  font-size: 2rem;
+}
+
+.contact p {
+  font-family: "ITC Benguiat W01";
+  color: white;
+}
+
+.contact a,
+.contact i {
+  color: white;
+  font-size: 35px;
+}
+
+.contact a:hover {
+  color: rgba(255, 255, 255, 0.822);
+}
+
+/*---------------------------------------------------------FOOTER---------------------------------------------------------------------*/
+footer {
+  display: none;
+  height: 5vh;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
