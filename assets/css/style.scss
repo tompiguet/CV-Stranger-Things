@@ -33,15 +33,14 @@ body {
     padding: 0;
 }
 
-
+/*------------------------------------------RIDEAU ACCUEIL---------------------------------------*/
+// disparition du rideau en dessous de 1000px de alrgeur d'écran
 @media screen and (max-width: 1000px) {
-    .up, .down {
+    .up,
+    .down {
         display: none;
     }
-
 }
-
-
 
 /*----------------------------------------- TEXTE FACON STRANGER THINGS----------------------------*/
 /* Plein écran */
@@ -440,6 +439,12 @@ body {
     }
 }
 
+/*adaptation de la taille de la photo de CV pour ne pas trop l'étirer en mode grand écran*/
+@media screen and (min-width: 900px) {
+    .profilPicture::before {
+        width: 60%;
+    }
+}
 .profilPicture:hover::before {
     background-image: url("../img/phototom.jpg");
 }

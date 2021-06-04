@@ -4,8 +4,10 @@ body {
   padding: 0;
 }
 
+/*------------------------------------------RIDEAU ACCUEIL---------------------------------------*/
 @media screen and (max-width: 1000px) {
-  .up, .down {
+  .up,
+  .down {
     display: none;
   }
 }
@@ -434,6 +436,13 @@ body {
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     -webkit-transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
             transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+/*adaptation de la taille de la photo de CV pour ne pas trop l'étirer en mode grand écran*/
+@media screen and (min-width: 900px) {
+  .profilPicture::before {
+    width: 60%;
   }
 }
 
