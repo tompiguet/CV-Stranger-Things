@@ -666,7 +666,14 @@ body {
 }
 
 .contact a:hover {
-  color: rgba(255, 255, 255, 0.822);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contact i:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 /*---------------------------------------------------------FOOTER---------------------------------------------------------------------*/
